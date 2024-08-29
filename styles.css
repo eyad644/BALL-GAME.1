@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #87CEEB; /* خلفية زرقاء سماوية */
+}
+
+.game-container {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    background-color: #ffffff;
+    border: 2px solid #000;
+    overflow: hidden;
+}
+
+#paddle {
+    position: absolute;
+    bottom: 10px;
+    width: 80px;
+    height: 10px;
+    background-color: #000;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#ball {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: orange; /* لون الكرة الأساسي */
+    border-radius: 50%;
+    background-image: radial-gradient(circle at center, orange 50%, black 50%), linear-gradient(black 2px, transparent 2px), linear-gradient(90deg, black 2px, transparent 2px);
+    background-size: 100% 100%, 20px 20px, 20px 20px;
+    background-repeat: no-repeat;
+}
+
+#score, #highScore {
+    position: absolute;
+    top: 10px;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+}
+
+#highScore {
+    right: 10px;
+}
+
+#score {
+    left: 10px;
+}
+
+.author {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
